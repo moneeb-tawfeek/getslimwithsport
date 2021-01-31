@@ -18,25 +18,31 @@ if (player == 'cristiano') {
 document.write('<h3>' + message + '</h3>');
 var Comparison = prompt("do you prefer the premier league or the'lalega'")
 
+
+
 while (Comparison !== 'lalega' & Comparison !== 'premier league') {
     Comparison = prompt("you have to  chois frome the option 'premier league or the'lalega'")
 }
+var showimge = function () {
+    var img;
+    if (Comparison == 'lalega') {
+        img = '<img src="OIP.jpg">'
+    }
+    else if (Comparison == 'premier league') {
+        img = '<img src="premier-league.jpg">/'
+    }
+    document.write(img)
 
-var img;
-if (Comparison == 'lalega') {
-    img = '<img src="OIP.jpg">'
-}
-else if (Comparison == 'premier league') {
-    img = '<img src="premier-league.jpg">/'
-}
-document.write(img)
+    var result = '';
+    var cupNum = prompt("order a champions league cup by our site'you can order up to 10 champions league cup' ")
 
-var result = '';
-var cupNum = prompt("order a champions league cup by our site'you can order up to 10 champions league cup' ")
+    for (var i = 0; i < cupNum; i++) {
+        console.log(i)
+        result = result + '<img src ="cup.jpg"/>';
+    }
+    return document.write(result)
 
-for (var i = 0; i < cupNum; i++) {
-    console.log(i)
-    result = result + '<img src ="cup.jpg"/>';
+
 }
-document.write(result)
+showimge();
 
